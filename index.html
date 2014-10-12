@@ -333,24 +333,34 @@ console.log('Second fruit: ' + fruits[1])   // prints grape to console
 
 ---
 
-# Array
-
-### Other array methods
+# Array - other array methods
 
 ```javascript
-length        // Sets or returns the number of elements in an array
-concat()      // Joins two or more arrays, and returns a copy of the joined arrays
-join()        // Joins all elements of an array into a string
-pop()         // Removes the last element of an array, and returns that element
-push()        // Adds new elements to the end of an array, and returns the new length
-reverse()     // Reverses the order of the elements in an array
-shift()       // Removes the first element of an array, and returns that element
-slice()       // Selects a part of an array, and returns the new array
-sort()        // Sorts the elements of an array
-splice()      // Adds/Removes elements from an array
-toString()    // Converts an array to a string, and returns the result
-unshift()     // Adds new elements to the beginning of an array, and returns the new length
-valueOf()     // Returns the primitive value of an array
+Array.length       // Sets or returns the number of elements in an array
+
+Array.concat()     // Joins two or more arrays, and returns a copy of the joined arrays
+
+Array.join()       // Joins all elements of an array into a string
+
+Array.pop()        // Removes the last element of an array, and returns that element
+
+Array.push()       // Adds new elements to the end of an array, and returns the new length
+
+Array.reverse()    // Reverses the order of the elements in an array
+
+Array.shift()      // Removes the first element of an array, and returns that element
+
+Array.slice()      // Selects a part of an array, and returns the new array
+
+Array.sort()       // Sorts the elements of an array
+
+Array.splice()     // Adds/Removes elements from an array
+
+Array.toString()   // Converts an array to a string, and returns the result
+
+Array.unshift()    // Adds new elements to the beginning of an array, returns the new length
+
+Array.valueOf()    // Returns the primitive value of an array
 ```
 
 ---
@@ -374,6 +384,702 @@ for (var i in cart) {
 ```
 
 Run code at [JS Bin](http://jsbin.com/defoba/1/edit)
+
+---
+
+# Math Object
+
+JavaScript provides built in mathematical methods through its Math object
+
+```javascript
+var sin_of_angle = Math.sin(Angle)
+
+var random_value = Math.floor(Math.random() * 10)
+```
+
+--
+
+Some important methods are
+
+```javascript
+Math.abs(val)         // absolute value
+
+Math.sin(val)         // sine of angle value
+
+Math.round(val)       // round value to nearest integer
+
+Math.ceil(val)        // round up to next integer
+
+Math.floor(val)       // round down to next integer
+
+Math.random()         // return a value from 0 to 1
+```
+
+--
+
+You can find more at [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+
+---
+
+# Math Object - constants
+
+<table>
+  <thead>
+    <tr style="text-align: left;">
+      <th style="width: 180px;">Constant</th>
+      <th>Description</th>
+      <th>Approcimate value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Math.E</td>
+      <td>the mathematical constant e</td>
+      <td>2.718</td>
+    </tr>
+    <tr>
+      <td>Math.LN2</td>
+      <td>the natural logarithm of 2</td>
+      <td>0.693</td>
+    </tr>
+    <tr>
+      <td>Math.LN10</td>
+      <td>the natural logarithm of 10</td>
+      <td>2.302</td>
+    </tr>
+    <tr>
+      <td>Math.LOG2E</td>
+      <td>the base-2 logarithm of e</td>
+      <td>1.443</td>
+    </tr>
+    <tr>
+      <td>Math.LOG10E</td>
+      <td>the base-10 logarithm of e</td>
+      <td>0.434</td>
+    </tr>
+    <tr>
+      <td>Math.PI</td>
+      <td>Pi</td>
+      <td>3.14159</td>
+    </tr>
+    <tr>
+      <td>MATH.SQRT1_2</td>
+      <td>the square root of 0.5, or, equivalently, one divided by the square root of 2</td>
+      <td>0.707</td>
+    </tr>
+    <tr>
+      <td>Math.SQRT2</td>
+      <td>the square root of 2</td>
+      <td>1.414</td>
+    </tr>
+  </tobyd>
+</table>
+
+---
+
+# Global Numeric functions
+
+--
+
+isFinite() - determines if a value is finite, legal number
+
+```javascript
+isFinite(1.23)            // returns true
+isFinite('hello')         // returns false
+```
+
+--
+
+isNaN() - determines wether a value is an illegal number
+
+```javascript
+isNaN(1.23)               // return false
+isNaN('hello')            // returns true
+```
+
+--
+
+parseFloat() - parses string and returns a float
+
+```javascript
+parseFloat('1.23')        // returns 1.23
+```
+
+--
+
+parseInt() - parses string and returns an integer
+
+```javascript
+parseInt('1234')          // returns 1234
+```
+
+
+---
+
+# Number object functions
+
+```javascript
+var num = 123.456
+```
+
+--
+
+toExponential(x) - returns a string representing the Number object in exponential notation
+
+```javascript
+num.toExponential()       // returns 1.23456e+2
+num.toExponential(1)      // returns 1.2e+2
+```
+
+--
+
+toFixed(x) - formats number with x digits after decimal
+
+```javascript
+num.toFixed(2)           // returns 123.45
+```
+
+--
+
+toPrecision(x)  formats a number to x length
+
+```javascript
+num.toPrecision(4)        // returns 123.4
+```
+
+---
+
+# String object
+
+```javascript
+var first_name = 'John'
+```
+
+--
+
+length property
+
+```javascript
+first_name.length          // 4
+```
+
+--
+
+toUpperCase()
+
+```javascript
+first_name.toUpperCase()   // JOHN
+```
+
+--
+
+toLowerCase()
+
+```javascript
+first_name.toLowerCase()   // john
+```
+
+---
+
+# String object
+
+```javascript
+var first_name = 'John'
+```
+
+--
+
+charAt(index) - returns character at index
+
+```javascript
+first_name.charAt(2)                // h
+```
+
+--
+
+concat(str) - returns copy of given string joined with str
+
+```javascript
+first_name.concat('ny')             // Johnny
+```
+
+--
+
+replace(str1, str2) - rreplaces substring str1 with str2
+
+```javascript
+first_name.replace('hn', 'e')       // Joe
+```
+
+--
+
+substr(start, len) - extract substring of 'len' characters. starting at 'start'
+
+```javascript
+first_name.substr(1, 2)                // oh
+```
+
+
+---
+
+# String - other string methods
+
+```javascript
+String.charCodeAt()    // Returns the Unicode of the character at the specified index
+
+String.fromCharCode()  // Converts Unicode values to characters
+
+String.indexOf()       // Returns position of first found occurrence of specified value
+                       // in string
+
+String.lastIndexOf()   // Returns position of last found occurrence of specified value
+                       // in string
+
+String.match()         // Searches for match between regular expression and string,
+                       // and returns the matches
+
+String.search()        // Searches for a match between a regular expression and a string,
+                       // and returns the position of the match
+
+String.slice()         // Extracts a part of a string and returns a new string
+
+String.split()         // Splits a string into an array of substrings
+
+String.substring()     // Extracts the characters from a string, between two
+                       // specified indices
+
+String.valueOf()       // Returns the primitive value of a String object
+
+```
+
+
+---
+
+# String
+
+### HTML Wrapper Methods
+
+--
+
+```javascript
+var str = 'blah'
+```
+
+--
+
+anchor(anchorName) - creates an anchor
+
+```javascript
+str.anchor('theAnchor')       // <a name="anchor">blah</a>
+```
+
+--
+
+link(url) - creates a link
+
+```javascript
+str.link('http://ntnu.no/')   // <a href="http://ntnu.no">blah</a>
+```
+
+--
+
+Most of the HTML wrapper methods are **deprecated** (the ones above are not). Read more about the String object at [developer.mozilla.org](developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+---
+
+class: center, middle
+
+# Debugging your JavaScript Programs
+
+---
+
+# Errors
+
+--
+
+### Load-time error
+
+Occurs when script is first loaded by the JavaScript interpreter
+
+--
+
+### Run-time error
+
+Occurs after script has been successfully loaded and is being executed
+
+--
+
+### Logical errors
+
+Free from syntax and structural mistakes, but results in incorrent results
+
+---
+
+# Common mistakes
+
+### Common errors
+
+Misspelling a variable name
+
+Mismatched parentheses or braces
+
+Mismatched quotes
+
+Missing quotes
+
+
+---
+
+# Debugging
+
+Process of searching code to locate a source of trouble
+
+### Tools and techniques
+
+JavaScript Console
+- prints errors when they occur
+- print your debugging text while coding
+
+Writing modular code
+- breaking up a programs different tasks into smaller, more manageable chunks
+
+---
+
+# Document methods
+
+**write()** - writes to document
+
+**writeln()** - same as write(), but adds a newline character
+
+Note that newline characters are normally ignored by browsers. You can use the pre tag to preserve line breaks. Example
+
+```javascript
+<pre>
+<script>
+document.writeln('Hello')
+document.writeln('World')
+
+document.write('Hello')
+document.write('Hello')
+</script>
+</pre>
+```
+
+Run code at [JS Bin](http://jsbin.com/hikigi/4/edit)
+
+---
+
+# Document methods
+
+**getElementById(id)**
+
+Accesses the element with the specified id
+
+**innerHTML** (property)
+
+refers to the text between the element's opening and closing tags
+
+**getElementsByName(name)**
+
+Accesses all elements with a specified name
+
+**getElementsByTagName()**
+
+Accesses all elements with a specified tag name
+
+[Example code](http://jsbin.com/kumuci/4/edit)
+
+
+---
+
+class: center, middle
+
+# Events
+
+---
+
+### Understanding event handlers
+
+Event
+- action that occurs within a web browser
+
+Event handler
+- statement that tells browsers what code to run in response to specified event
+
+```javascript
+Element.addEventListener('click', function(event) {
+  ... do something...
+})
+```
+
+
+---
+
+# Event - keydown
+
+HTML
+
+```html
+<input type="text" id="name">
+```
+
+JavaScript
+
+```javascript
+var input = document.getElementById('name')
+
+input.addEventListener('keydown', function (e) {
+  // e.target.value = e.target.value.toUpperCase()
+  input.value = input.value.toUpperCase()
+})
+```
+
+[JS Bin](http://jsbin.com/zucixi/1/edit)
+
+---
+
+# Event - keyup
+
+HTML
+
+```html
+<input type="text" id="name">
+```
+
+JavaScript
+
+```javascript
+var input = document.getElementById('name')
+
+input.addEventListener('keyup', function (e) {
+  // e.target.value = e.target.value.toUpperCase()
+  input.value = input.value.toUpperCase()
+})
+```
+
+[JS Bin](http://jsbin.com/qegog/1/edit)
+
+---
+
+# Event - change
+
+HTML
+
+```html
+<input type="text" id="name">
+```
+
+JavaScript
+
+```javascript
+var input = document.getElementById('name')
+
+input.addEventListener('change', function (e) {
+  // e.target.value = e.target.value.toUpperCase()
+  input.value = input.value.toUpperCase()
+})
+```
+
+* When the element is activated (radio buttons, checkboxes ...)
+
+* When the user commits the change explicitly (select, datepicker ...)
+
+* When the element loses focus after its value was changed, but not commited (textarea, input).
+
+[JS Bin](http://jsbin.com/jineru/1/edit)
+
+---
+
+# Event - click
+
+HTML
+
+```html
+<button id="my_button">Button</button>
+```
+
+JavaScript
+
+```javascript
+var button = document.getElementById('my_button')
+
+button.addEventListener('click', function (e) {
+  alert('i was clickd')
+})
+```
+
+[JS Bin](http://jsbin.com/zocima/1/edit)
+
+---
+
+class: center, middle
+
+# Date object
+
+Allows your JavaScript to work with dates and times
+
+---
+
+# Date object
+
+Date Object with current date and time
+
+```javascript
+var date = new Date()
+```
+
+--
+
+Using String
+
+```javascript
+var date = new Date("June 1, 1987 10:11:00")
+```
+
+--
+
+Using number
+
+```javascript
+var date = new Date(1413151890000) // using ms
+```
+
+--
+
+Others
+
+```javascript
+new Date(yr, mth, day, hrs, mins, secs, ms)
+
+new Date(2010)        // is valid.
+new Date(2010, , 1)   // is invalid.
+```
+
+---
+
+# Date object
+
+### Extracting date and time values
+
+![Extracting date and time values](./img/timestuff.png)
+
+---
+
+# Date object
+
+### Setting date and time values
+
+![Setting date and time values](./img/timestuff-2.png)
+
+---
+
+# Date object
+
+### Creating a custom **date** function
+
+```javascript
+function showDate(dateObj) {
+  var thisDate  = dateObj.getDate()                    // get day
+  var thisMonth = dateObj.getMonth() + 1               // get month (jan=0 so add 1)
+  var thisYear  = dateObj.getFullYear()                // get year
+
+  return thisMonth + "/" + thisDate + "/" + thisYear   // format as dd/mm/yyyy
+}
+```
+
+
+---
+
+# Date object
+
+### Creating a custom **time** function
+
+```javascript
+function showTime(dateObj) {
+  var thisSecond     = dateObj.getS econds(); // get seconds
+  var thisMinute = dateObj.getMinutes();      // get minutes
+  var thisHour   = dateObj.getHours();        // get hours
+
+  return thisHour + ":" + thisMinute + ":" + thisSecond; // format as hh:mm:ss
+}
+```
+
+---
+
+# Date object
+
+### calculate days until thesis deadline
+
+```javascript
+function showTime(currentDate) {
+  var deadline  = new Date('December 1, 2014')
+  var days      = parseInt((deadline - currentDate) / (1000 * 60 * 60 * 24))
+
+  return days
+}
+```
+
+---
+
+# JavaScript timing events
+
+### setTimeout()
+
+```javascript
+var x = setTimeout('command', delay)
+clearTimeout(x) // cancels timeOut
+```
+
+### setInterval()
+
+```javascript
+var x = setInterval('command', delay)
+clearInterval(x) // cancels interval
+```
+
+---
+
+# Timing events - example
+
+Countdown from 1000
+
+--
+
+HTML
+
+```html
+<button id="my_button">Button</button>
+<input type="text" id="num">
+```
+
+--
+
+JavaScript
+
+```javascript
+var c          = 1000
+, my_button    = document.getElementById('my_button')
+, input_field  = document.getElementById('num')
+
+var start = function() {
+  input_field.value = --c
+}
+
+my_button.addEventListener('click', function (e) {
+  setInterval(start, 1000)
+})
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
