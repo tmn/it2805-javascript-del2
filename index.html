@@ -91,7 +91,7 @@ For a function to return a value it must include a return statement
 
 ### Local variables
 
-* when you declare a variable within a function, the variable can only be accessed within that function
+When you declare a variable within a function, the variable can only be accessed within that function
 
 ```javascript
   var function_name = function(params) {
@@ -108,7 +108,7 @@ For a function to return a value it must include a return statement
 
 ### Global variables
 
-* if you declare a variable outside a function, all code in your application can access it
+If you declare a variable outside a function, all code in your application can access it
 
 ```javascript
   var a = 'JavaScript er gøy'
@@ -118,6 +118,33 @@ For a function to return a value it must include a return statement
   }
 
 ```
+
+---
+
+# Variables
+
+JavaScript has dynamic types - the same variable can be used as different types
+
+```javascript
+var text      = 'JavaScript er gøy'                 // String
+
+var truefalse = true                                // Boolean
+
+var my_num    = 42                                  // Number (int)
+var some_num  = 2.7                                 // Number (float)
+
+some_num      = false                               // type changed, now Boolean
+
+list          = []                                  // Array
+obj           = {}                                  // Object
+```
+
+You can check type of variable by using **typeof**
+
+```javascript
+typeof my_num                                       // Number
+```
+
 
 ---
 
