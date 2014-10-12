@@ -80,6 +80,7 @@ For a function to return a value it must include a return statement
 ```javascript
   var function_name = function(params) {
     var a = 'JavaScript er gøy'
+
     return a
   }
 ```
@@ -219,7 +220,162 @@ prompt()
 
 ---
 
-# Array 
+# Array
+
+High-level, list-like objects
+
+Instead of
+
+```javascript
+var fruit1 = 'apple'
+var fruit2 = 'orange'
+var fruit3 = 'banana'
+```
+
+you can do
+
+```javascript
+var fruits = new Array()
+fruits[0] = 'apple'
+fruits[1] = 'orange'
+fruits[2] = 'banana'
+```
+
+Useful if you have a list of data you want to loop through
+
+---
+
+# Array
+
+### Different ways of creating arrays
+
+--
+
+```javascript
+var fruits = new Array()    // creates a new array object
+```
+
+--
+
+or...
+
+```javascript
+var fruits = []             // equal to the one above
+```
+
+---
+
+# Array
+
+### Add items to array
+
+```javascript
+fruits[0] = 'apple'        // adds first item
+fruits[1] = 'orange'       // adds second item
+```
+
+--
+
+or ...
+
+```javascript
+fruits.push('apple')        // adds first item
+fruits.push('orange')       // adds second item
+```
+
+---
+
+# Array
+
+### Condensed and literal arrays
+
+--
+
+Condensed
+```javascript
+var fruits = new Array('apple', 'orange')
+```
+
+--
+
+Literal
+
+```javascript
+var fruits = ['apple', 'orange']
+```
+
+--
+
+**There is no difference in the produced object, they are the same**
+
+---
+
+# Array
+
+### Accessing and modifying Array
+
+One can access an array element by referring to its name and index
+
+```javascript
+var fruits = ['apple', 'orange']
+console.log('Second fruit: ' + fruits[1])   // prints orange to console
+```
+
+--
+
+One can easily modify an array element
+
+```javascript
+var fruits = ['apple', 'orange']
+fruits[1] = 'grape'
+console.log('Second fruit: ' + fruits[1])   // prints grape to console
+```
+
+---
+
+# Array
+
+### Other array methods
+
+```javascript
+length        // Sets or returns the number of elements in an array
+concat()      // Joins two or more arrays, and returns a copy of the joined arrays
+join()        // Joins all elements of an array into a string
+pop()         // Removes the last element of an array, and returns that element
+push()        // Adds new elements to the end of an array, and returns the new length
+reverse()     // Reverses the order of the elements in an array
+shift()       // Removes the first element of an array, and returns that element
+slice()       // Selects a part of an array, and returns the new array
+sort()        // Sorts the elements of an array
+splice()      // Adds/Removes elements from an array
+toString()    // Converts an array to a string, and returns the result
+unshift()     // Adds new elements to the beginning of an array, and returns the new length
+valueOf()     // Returns the primitive value of an array
+```
+
+---
+
+# Array - example
+
+### concat() and length
+
+```javascript
+var fruits = ['apple', 'orange']
+var veges = ['carrot', 'lettuce', 'spinach']
+
+var cart = fruits.concat(veges)
+
+document.getElementById('cart').innerHTML = cart.join(', ')
+document.getElementById('list-length')
+
+for (var i in cart) {
+  document.getElementById('cart-list').innerHTML += '<li>' + cart[i] + '</li>'
+}
+```
+
+Run code at [JS Bin](http://jsbin.com/defoba/1/edit)
+
+
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
