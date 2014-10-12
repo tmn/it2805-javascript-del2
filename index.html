@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      @import url(./css/trimark.css);
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: fullscreen
+
+![code](./img/bg.jpg)
+
+<div class="fullscreen-overlay">
+  <p>IT2805 - JavaScript part 2<small style="display: block;">Tri M. Nguyen</small></p>
+</div>
+
+---
+
+class: middle center
+
+Functions
+
+Control flows
+
+Arrays
+
+Global objects & functions
+
+
+---
+
+# Functions
+
+JavaScript treats functions as first clas citizens
+
+--
+
+
+Defining a function
+
+```javascript
+  function function_name(params) {
+    ...
+  }
+```
+
+--
+
+```javascript
+  var function_name = function(params) {
+    ...
+  }
+```
+
+--
+
+Calling a function
+
+```javascript
+  function_name(params)
+```
+
+---
+
+# Functions
+
+### Creating a function to return av value
+
+For a function to return a value it must include a return statement
+
+```javascript
+  var function_name = function(params) {
+    var a = 'JavaScript er gøy'
+    return a
+  }
+```
+
+---
+
+# Functions
+
+### Local variables
+
+* when you declare a variable within a function, the variable can only be accessed within that function
+
+```javascript
+  var function_name = function(params) {
+    var a = 'JavaScript er gøy'
+
+    console.log(a) // writes 'JavaScript er gøy' to console
+  }
+
+  // a is not accessible outside the function
+```
+---
+
+# Functions
+
+### Global variables
+
+* if you declare a variable outside a function, all code in your application can access it
+
+```javascript
+  var a = 'JavaScript er gøy'
+
+  var function_name = function(params) {
+    console.log(a) // writes 'JavaScript er gøy' to console
+  }
+
+```
+
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        highlightStyle: 'tomorrow',
+        highlightLanguage: 'javascript'
+      });
+    </script>
+  </body>
+</html>

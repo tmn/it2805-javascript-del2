@@ -1,0 +1,46 @@
+body {
+  font-family: "Raleway", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Raleway';
+  font-weight: normal;
+}
+
+.remark-code,
+.remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+.fullscreen {
+  padding: 0;
+}
+
+.fullscreen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  -webkit-filter: blur(3px);
+}
+
+.fullscreen-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 67%;
+
+  background:rgba(0, 0, 0, .75);
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.fullscreen-overlay small {
+  color: #08c;
+}
