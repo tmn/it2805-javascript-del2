@@ -118,7 +118,108 @@ For a function to return a value it must include a return statement
 
 ```
 
+---
 
+# JavaScript Control Flow
+
+### Conditional statements
+
+if, if else, else, switch ...
+
+--
+
+```javascript
+  var a = 'it2805'
+
+  if (a === 'it2805') {
+    ...
+  } else {
+    ...
+  }
+```
+
+--
+
+```javascript
+  switch (a) {
+    case 'it2805':
+      ...
+      break
+
+    default:
+      ...
+  }
+```
+---
+
+# JavaScript Control Flow
+
+### Iteration / looping
+
+for, while, do...while
+
+--
+
+```javascript
+for (var i = 0; i < 10; i++) {
+  ...
+}
+```
+
+--
+
+```javascript
+var i = 0
+while (i < 10) {
+  ...
+  ++i
+}
+```
+
+--
+
+```javascript
+do {
+  ...
+} while (i < 10)
+```
+
+
+---
+
+# Standard built-in objects
+
+Math, String, Array, Number **(rest of this lecture)**
+
+Date, RegExp, Navigator, Event, Screen **(next lecture)**
+
+...
+
+
+Document Objects **(subsequent lecture)**
+![netscape navigator 3 document object model](./img/docobj.png)
+
+
+---
+
+# Window Object
+
+Window is the root class, so no need to explicitly specify the class before calling its functions
+
+There are a set of cuntions that can create pop-up windows to issue warnings, confirm information and request for user input:
+
+```javascript
+alert()
+
+confirm()
+
+prompt()
+```
+
+
+---
+
+# Array 
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
