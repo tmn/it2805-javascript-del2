@@ -125,20 +125,32 @@ If you declare a variable outside a function, all code in your application can a
 
 JavaScript has dynamic types - the same variable can be used as different types
 
+--
 ```javascript
 var text      = 'JavaScript er gøy'                 // String
-
+```
+--
+```javascript
 var truefalse = true                                // Boolean
-
+```
+--
+```javascript
 var my_num    = 42                                  // Number (int)
+```
+--
+```javascript
 var some_num  = 2.7                                 // Number (float)
-
+```
+--
+```javascript
 some_num      = false                               // type changed, now Boolean
-
+```
+--
+```javascript
 list          = []                                  // Array
-obj           = {}                                  // Object
 ```
 
+--
 You can check type of variable by using **typeof**
 
 ```javascript
@@ -310,6 +322,15 @@ fruits.push('apple')        // adds first item
 fruits.push('orange')       // adds second item
 ```
 
+--
+
+wtf...
+
+```javascript
+fruits[5] = 'mango'
+```
+
+
 ---
 
 # Array
@@ -403,7 +424,7 @@ var veges = ['carrot', 'lettuce', 'spinach']
 var cart = fruits.concat(veges)
 
 document.getElementById('cart').innerHTML = cart.join(', ')
-document.getElementById('list-length')
+document.getElementById('list-length').innerHTML = cart.length
 
 for (var i in cart) {
   document.getElementById('cart-list').innerHTML += '<li>' + cart[i] + '</li>'
@@ -698,7 +719,7 @@ var str = 'blah'
 anchor(anchorName) - creates an anchor
 
 ```javascript
-str.anchor('theAnchor')       // <a name="anchor">blah</a>
+str.anchor('theAnchor')       // <a name="theAnchor">blah</a>
 ```
 
 --
@@ -712,6 +733,53 @@ str.link('http://ntnu.no/')   // <a href="http://ntnu.no">blah</a>
 --
 
 Most of the HTML wrapper methods are **deprecated** (the ones above are not). Read more about the String object at [developer.mozilla.org](developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+
+---
+
+# Document methods
+
+**write()** - writes to document
+
+**writeln()** - same as write(), but adds a newline character
+
+Note that newline characters are normally ignored by browsers. You can use the pre tag to preserve line breaks. Example
+
+```javascript
+<pre>
+<script>
+document.writeln('Hello')
+document.writeln('World')
+
+document.write('Hello')
+document.write('Hello')
+</script>
+</pre>
+```
+
+Run code at [JS Bin](http://jsbin.com/hikigi/4/edit)
+
+---
+
+# Document methods
+
+**getElementById(id)**
+
+Accesses the element with the specified id
+
+**innerHTML** (property)
+
+refers to the text between the element's opening and closing tags
+
+**getElementsByName(name)**
+
+Accesses all elements with a specified name
+
+**getElementsByTagName()**
+
+Accesses all elements with a specified tag name
+
+[Example code](http://jsbin.com/kumuci/4/edit)
 
 ---
 
@@ -770,52 +838,6 @@ JavaScript Console
 
 Writing modular code
 - breaking up a programs different tasks into smaller, more manageable chunks
-
----
-
-# Document methods
-
-**write()** - writes to document
-
-**writeln()** - same as write(), but adds a newline character
-
-Note that newline characters are normally ignored by browsers. You can use the pre tag to preserve line breaks. Example
-
-```javascript
-<pre>
-<script>
-document.writeln('Hello')
-document.writeln('World')
-
-document.write('Hello')
-document.write('Hello')
-</script>
-</pre>
-```
-
-Run code at [JS Bin](http://jsbin.com/hikigi/4/edit)
-
----
-
-# Document methods
-
-**getElementById(id)**
-
-Accesses the element with the specified id
-
-**innerHTML** (property)
-
-refers to the text between the element's opening and closing tags
-
-**getElementsByName(name)**
-
-Accesses all elements with a specified name
-
-**getElementsByTagName()**
-
-Accesses all elements with a specified tag name
-
-[Example code](http://jsbin.com/kumuci/4/edit)
 
 
 ---
